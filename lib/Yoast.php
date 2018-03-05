@@ -59,17 +59,17 @@ class Yoast {
 		$price = wc_get_price_to_display( $product );
 
 		if ( ! empty( $price ) ) {
-			echo '<meta property="og:product:price:amount" content="', esc_attr( $price ), '">', "\n";
+			echo '<meta property="product:price:amount" content="', esc_attr( $price ), '">', "\n";
 
 			$currency = get_woocommerce_currency();
 
 			if ( ! empty( $currency ) ) {
-				echo '<meta property="og:product:price:currency" content="', esc_attr( $currency ), '">', "\n";
+				echo '<meta property="product:price:currency" content="', esc_attr( $currency ), '">', "\n";
 			}
 		}
 
 		if ( $product->is_in_stock() ) {
-			echo '<meta property="og:product:availability" content="instock">', "\n";
+			echo '<meta property="product:availability" content="instock">', "\n";
 		}
 	}
 
